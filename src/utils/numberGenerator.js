@@ -1,3 +1,7 @@
+/**
+ * Classe que gera os números randomicos dentro do intervalo dado
+ */
+
 class numberGenerator {
   constructor (min = 0, max = 100) {
     this.min = min

@@ -1,7 +1,12 @@
+/** 
+*Componente de Visor que exibe o campo para o jogador inicar o jogo
+*E verificar se o computador acertou no núemro que ele estava pensando 
+*/
+
+
 import React, { useState,useRef,useEffect} from 'react' 
 import NumberGenerator from '../../utils/numberGenerator'
 import { Button,Container,Form,ButtonGroup,Row} from 'react-bootstrap';
-import moment from 'moment'
 import {empty} from '../../utils/string.utils'
 import {createMethod}from '../../requests/api/api'
 import { Message } from '../../utils/alert.utils';

@@ -1,8 +1,11 @@
+
+/** 
+*Arquivo com funções de requisição HTTP 
+*para comunicar com back end en NodeJs 
+*/
 import axios from 'axios'
-import { reject } from 'lodash-es';
 
  const request = {
-    //"URL":"https://oxis-live.herokuapp.com/",
     "URL":'http://localhost:4500/'
 }
 
@@ -33,13 +36,6 @@ export const createMethod = async (data,path)=>{
    }
 
 }
-
-//   export const getAllMethodJogadas= async ()=>{
-//     const resp = await fetch(`${request.URL}${'gameplay/allJogadas'}`);
-
-//    return await resp.json();
-    
-//   };
 
 
   export const getAllMethodJogadas= async ()=>{

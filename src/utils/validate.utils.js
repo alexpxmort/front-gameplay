@@ -1,3 +1,8 @@
+/**
+ * Arquivo com função que valida os inputs que são passados pra ele
+ * dentro de um array
+ */
+
 export const validateInputs = (array)=>{
 
     var valid = false;

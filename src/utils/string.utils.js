@@ -1,3 +1,8 @@
+/**
+ * 
+ * 
+ * Arquivo com principais funcoes de string como empty,setNull entre outras 
+ */
 export const capitalize = (s) => {
     if (typeof s !== 'string') return ''
     return s.charAt(0).toUpperCase() + s.slice(1)

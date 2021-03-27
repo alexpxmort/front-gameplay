@@ -1,9 +1,15 @@
-import React, { useState,useImperativeHandle,useEffect,memo, useCallback,forwardRef} from 'react' 
-import { Button,Container,Form,ButtonGroup,Row} from 'react-bootstrap';
+/** 
+*Componente de Ranking que exibe o Ranking de jogadores 
+*de acordo com o número de jogadas e o tempo gasto ao faze-lás
+*/
+
+import React, { useState,useImperativeHandle,useEffect, useCallback,forwardRef} from 'react' 
+import { Container,Row} from 'react-bootstrap';
 import {getAllMethodJogadas} from '../../requests/api/api'
 import _ from 'lodash';
 import { empty } from '../../utils/string.utils';
 import moment from 'moment';
+import { Message } from '../../utils/alert.utils';
 
 const Ranking = (props,ref) =>{
     const [jogadas,setJogadas] = useState([]);
@@ -16,7 +22,7 @@ const Ranking = (props,ref) =>{
     
     const getData = async()=>{
         let _jogadas = await getAllMethodJogadas();
-        
+
         if(_jogadas.error){
             alert(_jogadas.msg);
             return false;
@@ -28,7 +34,7 @@ const Ranking = (props,ref) =>{
         let _jogadas = await getAllMethodJogadas();
 
         if(_jogadas.error){
-            alert(_jogadas.msg);
+            Message('Aviso!',_jogadas.msg,'warning');
             return false;
         }
         await setJogadas(getNewArr(_jogadas.jogadas));

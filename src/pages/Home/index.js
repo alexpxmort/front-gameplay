@@ -1,4 +1,10 @@
-import React,{useState,useRef, useCallback, useEffect} from 'react'
+/**
+ * Componente de da página de Home Onde fica
+ * o componente de visor do jogo e o ranking
+ */
+
+
+import React,{useRef, useCallback} from 'react'
 import { Button, Container } from 'react-bootstrap';
 import Ranking from '../../components/ranking'
 import Visor from '../../components/visor'
@@ -12,8 +18,6 @@ const HomePage = ()=>{
     },[]);
 
    
-
-
     return(
         <Container>
             <Visor/>
